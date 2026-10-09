@@ -91,10 +91,10 @@ export default function About() {
               </div>
 
               <div className="flex flex-col">
-                <p className="font-tall text-base uppercase leading-none">
+                <p className="font-tall text-lg uppercase leading-none">
                   Big Flavor
                 </p>
-                <p className="text-xs text-muted leading-none">
+                <p className="text-base text-muted leading-none">
                   Burgers made to satisfy.
                 </p>
               </div>
@@ -105,10 +105,10 @@ export default function About() {
               </div>
 
               <div className="flex flex-col">
-                <p className="font-tall text-base uppercase leading-none">
+                <p className="font-tall text-lg uppercase leading-none">
                   Good Portions
                 </p>
-                <p className="text-xs text-muted leading-none">
+                <p className="text-base text-muted leading-none">
                   More burger, more joy.
                 </p>
               </div>
@@ -119,10 +119,10 @@ export default function About() {
               </div>
 
               <div className="flex flex-col">
-                <p className="font-tall text-base uppercase leading-none">
+                <p className="font-tall text-lg uppercase leading-none">
                   Great Value
                 </p>
-                <p className="text-xs text-muted leading-none">
+                <p className="text-base text-muted leading-none">
                   Good food, fair prices
                 </p>
               </div>
@@ -133,10 +133,10 @@ export default function About() {
               </div>
 
               <div className="flex flex-col">
-                <p className="font-tall text-base uppercase leading-none">
+                <p className="font-tall text-lg uppercase leading-none">
                   Made To Order
                 </p>
-                <p className="text-xs text-muted leading-none">
+                <p className="text-base text-muted leading-none">
                   Prepared when you order.
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-8 bg-second pb-8">
+      <div className="mt-10 bg-second pb-8">
         <div className="relative h-84 w-full rounded-2xl overflow-hidden">
           <div ref={mapRef} className="absolute inset-0 z-0" />
           <div className="absolute bottom-0 left-0 right-0 flex bg-panel rounded-2xl shadow-2xl gap-2 divide-x divide-(--color-accent) p-2">
