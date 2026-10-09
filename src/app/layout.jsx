@@ -25,8 +25,36 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata = {
-  title: "Rhons' Burger",
-  description: "Big burgers. Big flavor.",
+  title: "Rhon's Burger • Bite into Better",
+  description:
+    "Satisfy your cravings with Rhon's Burger. Explore a menu of burgers, fries, hotdogs, and more, then place your order and enjoy your favorites delivered straight to your door.",
+
+  openGraph: {
+    title: "Rhon's Burger • Bite into Better",
+    description:
+      "Satisfy your cravings with Rhon's Burger. Explore a menu of burgers, fries, hotdogs, and more, then place your order and enjoy your favorites delivered straight to your door.",
+    url: "https://https://rhons-burger.vercel.app/",
+    siteName: "Rhon's Burger",
+    locale: "en-US",
+    type: "website",
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Rhon's Burger • Bite into Better",
+    description:
+      "Satisfy your cravings with Rhon's Burger. Explore a menu of burgers, fries, hotdogs, and more, then place your order and enjoy your favorites delivered straight to your door.",
+    images: "/banner.png",
+  },
+
+  metadataBase: new URL("https://https://rhons-burger.vercel.app/"),
 };
 
 export default function RootLayout({ children }) {
