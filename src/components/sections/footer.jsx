@@ -112,8 +112,8 @@ export default function Footer() {
       </div>
       <div className="w-full h-px bg-accent my-4" />
       <div className="flex justify-between">
-        <p className="text-sm text-neutral">© 2026 Rhon's Burger</p>
-        <p className="text-sm text-neutral">Made by wakamonoo</p>
+        <p className="text-xs text-neutral opacity-60">© 2026 Rhon's Burger</p>
+        <p className="text-xs text-neutral opacity-60">made by wakamonoo</p>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import Banner from "@/components/sections/hero";
 import Navbar from "@/components/layout/essentials/navbar";
 import About from "@/components/sections/about";
 import Featured from "@/components/sections/featured";
@@ -8,7 +9,8 @@ export default function Page() {
   return (
     <div>
       <Navbar />
-      <div className="p-2 sm:px-4 md:px-8 lg:px-16 xl:px-32">
+      <div className="mt-20 p-2 sm:px-4 md:px-8 lg:px-16 xl:px-32">
+        <Banner />
         <Featured />
         <Menu />
       </div>

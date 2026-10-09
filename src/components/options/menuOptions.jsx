@@ -30,16 +30,16 @@ export default function MenuOptions({
   return (
     <div
       ref={divRef}
-      className="absolute top-14 right-0 h-fit w-[20vw] bg-panel rounded-lg shadow-2xl p-2 z-100"
+      className="absolute top-14 right-0 h-fit w-fit bg-panel rounded-lg shadow-2xl p-2 z-100"
     >
       <div className="flex flex-col">
-        <button className="cursor-pointer flex items-center gap-4 p-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
+        <button className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
           <LuHistory className="text-base text-normal" />
-          <p className="text-base text-normal font-semibold">Order History</p>
+          <p className="text-base text-normal font-semibold whitespace-nowrap">Order History</p>
         </button>
-        <button className="cursor-pointer flex items-center gap-4 p-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
+        <button className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
           <LuUserRoundPlus className="text-base text-normal" />
-          <p className="text-base text-normal font-semibold">Sign In</p>
+          <p className="text-base text-normal font-semibold whitespace-nowrap">Sign In</p>
         </button>
       </div>
     </div>

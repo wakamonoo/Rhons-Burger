@@ -10,7 +10,7 @@ export default function Featured() {
           <h2 className="text-lg uppercase">Featured Products</h2>
           <div className="min-w-4 flex-1 h-px bg-accent" />
         </div>
-        <p className="text-sm text-normal">Burgers worth coming back for.</p>
+        
       </div>
       <div className="mt-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
         <div className="flex gap-2 items-center bg-second rounded-lg shadow-lg overflow-hidden">

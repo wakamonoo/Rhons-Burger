@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed z-100 w-full flex justify-between items-center p-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 bg-second">
-      <div className="w-14 h-auto">
+      <div className="w-20 h-auto">
         <Image src={Logo} alt="logo" className="w-full h-full object-contain" />
       </div>
 
