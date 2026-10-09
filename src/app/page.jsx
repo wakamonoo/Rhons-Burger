@@ -1,0 +1,19 @@
+import Navbar from "@/components/layout/essentials/navbar";
+import About from "@/components/sections/about";
+import Featured from "@/components/sections/featured";
+import Footer from "@/components/sections/footer";
+import Menu from "@/components/sections/menu";
+
+export default function Page() {
+  return (
+    <div>
+      <Navbar />
+      <div className="p-2 sm:px-4 md:px-8 lg:px-16 xl:px-32">
+        <Featured />
+        <Menu />
+      </div>
+      <About />
+      <Footer />
+    </div>
+  );
+}
