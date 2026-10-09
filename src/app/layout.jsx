@@ -33,7 +33,7 @@ export const metadata = {
     title: "Rhon's Burger • Bite into Better",
     description:
       "Satisfy your cravings with Rhon's Burger. Explore a menu of burgers, fries, hotdogs, and more, then place your order and enjoy your favorites delivered straight to your door.",
-    url: "https://https://rhons-burger.vercel.app/",
+    url: "https://rhons-burger.vercel.app/",
     siteName: "Rhon's Burger",
     locale: "en-US",
     type: "website",
@@ -54,7 +54,7 @@ export const metadata = {
     images: "/banner.png",
   },
 
-  metadataBase: new URL("https://https://rhons-burger.vercel.app/"),
+  metadataBase: new URL("https://rhons-burger.vercel.app/"),
 };
 
 export default function RootLayout({ children }) {
