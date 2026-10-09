@@ -6,6 +6,7 @@ import { TbBurger } from "react-icons/tb";
 import { useRef, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import MenuOptions from "@/components/options/menuOptions";
+import ActionButton from "@/components/buttons/actionButton";
 
 export default function Navbar() {
   const [showMenuOptions, setShowMenuOptions] = useState(false);
@@ -18,12 +19,13 @@ export default function Navbar() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <button className="cursor-pointer flex items-center gap-2 border border-accent px-4 py-2 group rounded-full  transition-all duration-200 hover:bg-(--color-accent) active:bg-(--color-accent)">
+        <ActionButton>
           <LuShoppingBasket className="text-2xl shrink-0 text-accent transition-all duration-200 group-hover:text-(--color-neutral) group-active:text-(--color-neutral)" />
           <p className="text-sm uppercase text-accent font-tall transition-all duration-200 group-hover:text-(--color-neutral) group-active:text-(--color-neutral)">
             My Tray
           </p>
-        </button>
+        </ActionButton>
+
         <div className="relative">
           <button
             ref={menuOptionsButtonRef}

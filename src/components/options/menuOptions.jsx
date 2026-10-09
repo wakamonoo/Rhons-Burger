@@ -1,12 +1,14 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { LuHistory, LuUserRoundPlus } from "react-icons/lu";
+import { LuHistory, LuLogOut, LuUserRoundPlus } from "react-icons/lu";
+import { UserContext } from "@/context/userContext";
 
 export default function MenuOptions({
   setShowMenuOptions,
   menuOptionsButtonRef,
 }) {
+  const { setShowSignInModal, isLogged } = useContext(UserContext);
   const divRef = useRef(null);
   const router = useRouter();
 
@@ -18,7 +20,7 @@ export default function MenuOptions({
         menuOptionsButtonRef.current &&
         !menuOptionsButtonRef.current.contains(e.target)
       ) {
-         setShowMenuOptions(false);
+        setShowMenuOptions(false);
       }
     }
     document.addEventListener("pointerdown", handleOutClick);
@@ -35,12 +37,37 @@ export default function MenuOptions({
       <div className="flex flex-col">
         <button className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
           <LuHistory className="text-base text-normal" />
-          <p className="text-base text-normal font-semibold whitespace-nowrap">Order History</p>
+          <p className="text-base text-normal font-semibold whitespace-nowrap">
+            Order History
+          </p>
         </button>
-        <button className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
-          <LuUserRoundPlus className="text-base text-normal" />
-          <p className="text-base text-normal font-semibold whitespace-nowrap">Sign In</p>
-        </button>
+        {isLogged ? (
+          <button
+            onClick={() => {
+              setShowMenuOptions(false);
+              setShowSignInModal(true);
+            }}
+            className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)"
+          >
+            <LuLogOut className="text-base text-normal" />
+            <p className="text-base text-normal font-semibold whitespace-nowrap">
+              Sign Out
+            </p>
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              setShowMenuOptions(false);
+              setShowSignInModal(true);
+            }}
+            className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)"
+          >
+            <LuUserRoundPlus className="text-base text-normal" />
+            <p className="text-base text-normal font-semibold whitespace-nowrap">
+              Sign In
+            </p>
+          </button>
+        )}
       </div>
     </div>
   );

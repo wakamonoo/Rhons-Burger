@@ -1,5 +1,6 @@
 import { Bebas_Neue, Paytone_One, Lilita_One, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { UserProvider } from "@/context/userContext";
 
 const paytoneOne = Paytone_One({
   variable: "--font-heading",
@@ -63,7 +64,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${paytoneOne.variable} ${dmsans.variable} ${lilitaOne.variable} ${bebas.variable} scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <UserProvider>{children}</UserProvider>
+      </body>
     </html>
   );
 }
