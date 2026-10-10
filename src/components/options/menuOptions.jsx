@@ -3,6 +3,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LuHistory, LuLogOut, LuUserRoundPlus } from "react-icons/lu";
 import { UserContext } from "@/context/userContext";
+import MenuButton from "../buttons/menuButton";
+import { RiAdminLine } from "react-icons/ri";
 
 export default function MenuOptions({
   setShowMenuOptions,
@@ -35,38 +37,48 @@ export default function MenuOptions({
       className="absolute top-14 right-0 h-fit w-fit bg-panel rounded-lg shadow-2xl p-2 z-100"
     >
       <div className="flex flex-col">
-        <button className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)">
+        <MenuButton
+          onClick={() => {
+            setShowMenuOptions(false);
+            router.push("/admin");
+          }}
+        >
+          <RiAdminLine className="text-base text-normal" />
+          <p className="text-base text-normal font-semibold whitespace-nowrap">
+            Admin Dashboard
+          </p>
+        </MenuButton>
+        <MenuButton>
           <LuHistory className="text-base text-normal" />
           <p className="text-base text-normal font-semibold whitespace-nowrap">
             Order History
           </p>
-        </button>
+        </MenuButton>
+
         {isLogged ? (
-          <button
+          <MenuButton
             onClick={() => {
               setShowMenuOptions(false);
               setShowSignInModal(true);
             }}
-            className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)"
           >
             <LuLogOut className="text-base text-normal" />
             <p className="text-base text-normal font-semibold whitespace-nowrap">
               Sign Out
             </p>
-          </button>
+          </MenuButton>
         ) : (
-          <button
+          <MenuButton
             onClick={() => {
               setShowMenuOptions(false);
               setShowSignInModal(true);
             }}
-            className="cursor-pointer flex items-center gap-4 px-4 py-2 rounded-lg transition-all duration-200 hover:bg-(--color-secondary)"
           >
             <LuUserRoundPlus className="text-base text-normal" />
             <p className="text-base text-normal font-semibold whitespace-nowrap">
               Sign In
             </p>
-          </button>
+          </MenuButton>
         )}
       </div>
     </div>
